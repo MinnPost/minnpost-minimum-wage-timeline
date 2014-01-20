@@ -1,0 +1,17 @@
+<div class="content-container">
+
+  <h3>Minnpost Minimum Wage Timeline</h3>
+
+  <%= loading %>
+
+  
+  
+  
+</div>
+
+<div class="footnote-container">
+  <div class="footnote">
+    <p>Notes about data here.</p>
+    
+  </div>
+</div>

@@ -1,0 +1,28 @@
+{
+  "requirejs": {
+    "rname": "requirejs",
+    "js": [
+      "requirejs/require"
+    ]
+  },
+  "text": {
+    "rname": "text",
+    "js": [
+      "text/text"
+    ]
+  },
+  "jquery": {
+    "rname": "jquery",
+    "js": [
+      "jquery/jquery.min"
+    ],
+    "returns": "$"
+  },
+  "underscore": {
+    "rname": "underscore",
+    "js": [
+      "underscore/underscore-min"
+    ],
+    "returns": "_"
+  }
+}

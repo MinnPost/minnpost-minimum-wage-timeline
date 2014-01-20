@@ -1,0 +1,23 @@
+{
+  "name": "minnpost-minimum-wage-timeline",
+  "version": "0.0.0",
+  "main": "index.html",
+  "homepage": "https://github.com/minnpost/minnpost-minimum-wage-timeline",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minnpost/minnpost-minimum-wage-timeline"
+  },
+  "bugs": "https://github.com/minnpost/minnpost-minimum-wage-timeline/issues",
+  "license": "MIT",
+  "author": {
+    "name": "MinnPost",
+    "email": "data@minnpost.com"
+  },
+  "dependencies": {
+    "jquery": "~1.9",
+    "underscore": "~1.5.2",
+    "requirejs": "~2.1.9",
+    "text": "~2.0.10"
+  }
+}
+
