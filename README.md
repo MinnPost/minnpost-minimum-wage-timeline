@@ -6,21 +6,17 @@ A vertical timeline of minimum wage in Minnesota
 
 ## Data
 
-*Describe the data sources here.  Use links and URLs to show where the data came from.  Put small sized originals or modified data sources in the ```data``` folder*
-
-*For larger data sources that may need to be processed, provide instructions on how to download.  For instance:  ```cd data && wget blah.txt```.  Also, make sure to put an entry in the ```.gitignore```.*
+Data is coming from [this Google Spreasheet](https://docs.google.com/a/minnpost.com/spreadsheet/ccc?key=0AjYft7IGrHzNdFZTV0tHRGtEVWxrQXhRUGJ3emtoZmc).
 
 ## Data processing
 
-The following describes how the data was processed and is not necessarily needed to run or install the application, but more included for reference, transparency, and development.
-
-*Describe data processing here, include commands.  Put data processing scripts or configurations in the ```data-processing``` folder.*
+*Data processing not necesary.*
 
 ## Development and running locally
 
 ### Prerequisites
 
-All commands are assumed to on the [command line](http://en.wikipedia.org/wiki/Command-line_interface), often called the Terminal, unless otherwise noted.  The following will install technologies needed for the other steps and will only needed to be run once on your computer so there is a good chance you already have these technologies on your computer.
+All commands are assumed to be on the [command line](http://en.wikipedia.org/wiki/Command-line_interface), often called the Terminal, unless otherwise noted.  The following will install technologies needed for the other steps and will only needed to be run once on your computer so there is a good chance you already have these technologies on your computer.
 
 1. Install [Git](http://git-scm.com/).
    * On a Mac, install [Homebrew](http://brew.sh/), then do: `brew install git`
@@ -28,13 +24,10 @@ All commands are assumed to on the [command line](http://en.wikipedia.org/wiki/C
    * On a Mac, do: `brew install node`
 1. Optionally, for development, install [Grunt](http://gruntjs.com/): `npm install -g grunt-cli`
 1. Install [Bower](http://bower.io/): `npm install -g bower`
-
-
 1. Install [Sass](http://sass-lang.com/): `gem install sass`
    * On a Mac do: `sudo gem install sass`
-   1. Install [Compass](http://compass-style.org/): `gem install compass`
+1. Install [Compass](http://compass-style.org/): `gem install compass`
    * On a Mac do: `sudo gem install compass`
-
 
 ### Get code and install packages
 
@@ -44,10 +37,6 @@ Get the code for this project and install the necessary dependency libraries and
 1. Go into the template directory: `cd minnpost-minimum-wage-timeline`
 1. Install NodeJS packages: `npm install`
 1. Install Bower components: `bower install`
-
-
-
-
 
 ### Running
 
