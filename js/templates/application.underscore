@@ -1,17 +1,9 @@
 <div class="content-container">
-
-  <h3>Minnpost Minimum Wage Timeline</h3>
-
-  <%= loading %>
-
-  
-  
-  
+  <div class="minimum-wage-timeline-container"></div>
 </div>
 
 <div class="footnote-container">
   <div class="footnote">
-    <p>Notes about data here.</p>
-    
+    <p>Data compiled by MinnPost.  Some data, code, and techniques can be found on <a href="https://github.com/MinnPost/minnpost-minimum-wage-timeline" target="_blank">Github</a>.</p>
   </div>
 </div>

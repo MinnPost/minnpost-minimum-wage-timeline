@@ -24,5 +24,56 @@
       "underscore/underscore-min"
     ],
     "returns": "_"
+  },
+  "handlebars": {
+    "rname": "handlebars",
+    "js": [
+      "handlebars/handlebars.min"
+    ]
+  },
+  "tabletop": {
+    "rname": "tabletop",
+    "js": [
+      "tabletop/src/tabletop"
+    ]
+  },
+  "isotope": {
+    "rname": "isotope",
+    "js": [
+      "isotope/jquery.isotope.min"
+    ]
+  },
+  "jquery-resize": {
+    "rname": "jquery-resize",
+    "js": [
+      "jquery-resize/jquery.ba-resize.min"
+    ]
+  },
+  "eventEmitter": {
+    "rname": "eventEmitter/EventEmitter",
+    "js": [
+      "eventEmitter/EventEmitter.min"
+    ]
+  },
+  "eventie": {
+    "rname": "eventie/eventie",
+    "js": [
+      "eventie/eventie"
+    ]
+  },
+  "imagesloaded": {
+    "rname": "imagesloaded",
+    "js": [
+      "imagesloaded/imagesloaded"
+    ]
+  },
+  "jquery-vertical-timeline": {
+    "rname": "jquery-vertical-timeline",
+    "js": [
+      "jquery-vertical-timeline/dist/jquery-vertical-timeline.min"
+    ],
+    "css": [
+      "jquery-vertical-timeline/dist/jquery-vertical-timeline.min"
+    ]
   }
 }

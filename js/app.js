@@ -2,6 +2,7 @@
  * Main JS for: minnpost-minimum-wage-timeline
  */
 
+
 /**
  * RequireJS config which maps out where files are and shims
  * any non-compliant libraries.
@@ -14,19 +15,41 @@ require.config({
     'Backbone': {
       deps: ['underscore', 'jquery'],
       exports: 'Backbone'
+    },
+    'handlebars': {
+      exports: 'Handlebars'
+    },
+    'tabletop': {
+      exports: 'Tabletop'
+    },
+    'isotope': {
+      deps: ['jquery']
+    },
+    'jquery-resize': {
+      deps: ['jquery']
+    },
+    'jquery-vertical-timeline': {
+      deps: ['jquery', 'handlebars', 'tabletop', 'isotope', 'jquery-resize', 'imagesloaded']
     }
   },
   baseUrl: 'js',
   paths: {
-    
     'requirejs': '../bower_components/requirejs/require',
     'text': '../bower_components/text/text',
     'jquery': '../bower_components/jquery/jquery.min',
     'underscore': '../bower_components/underscore/underscore-min',
-    
+    'handlebars': '../bower_components/handlebars/handlebars.min',
+    'tabletop': '../bower_components/tabletop/src/tabletop',
+    'isotope': '../bower_components/isotope/jquery.isotope.min',
+    'jquery-resize': '../bower_components/jquery-resize/jquery.ba-resize.min',
+    'eventEmitter/EventEmitter': '../bower_components/eventEmitter/EventEmitter.min',
+    'eventie/eventie': '../bower_components/eventie/eventie',
+    'imagesloaded': '../bower_components/imagesloaded/imagesloaded',
+    'jquery-vertical-timeline': '../bower_components/jquery-vertical-timeline/dist/jquery-vertical-timeline.min',
     'minnpost-minimum-wage-timeline': 'app'
   }
 });
+
 
 /**
  * Create minnpost-minimum-wage-timeline application class.
@@ -34,19 +57,10 @@ require.config({
  * Update with any libraries that are needed.
  */
 define('minnpost-minimum-wage-timeline', [
-  'jquery', 'underscore', 'helpers',
-  
-  
-  
-  
+  'jquery', 'underscore', 'helpers', 'jquery-vertical-timeline',
   'text!templates/application.underscore', 'text!templates/loading.underscore'
 ],
-function($, _, helpers,
-  
-  
-  
-  
-  tApplication, tLoading) {
+function($, _, helpers, jVT, tApplication, tLoading) {
 
   // Main function for execution, proxied here so that
   // you do not have to scroll down all the way
@@ -64,17 +78,18 @@ function($, _, helpers,
     // assuming you are using the default template
     //   this.$content
 
-    // All the methods from helpers.js are attached
-    // to `this` as well.  These include things like
-    // formatters.
+    this.$content.find('.minimum-wage-timeline-container').verticalTimeline({
+      key: '0AjYft7IGrHzNdFZTV0tHRGtEVWxrQXhRUGJ3emtoZmc',
+      sheetName: 'timeline-data',
+      groupFunction: 'groupSegmentByDecade',
+      tabletopOptions: {
+        parameterize: 'http://gs-proxy.herokuapp.com/proxy?url='
+      }
+    });
 
-    
 
-    
 
-    
 
-    
   };
 
   // Default options
@@ -82,7 +97,6 @@ function($, _, helpers,
     el: '.minnpost-minimum-wage-timeline-inline-container',
     paths: {
       local: {
-        
         css: '.tmp/css/main.css',
         ie: '.tmp/css/main.ie.css',
         images: 'images/',
@@ -103,12 +117,6 @@ function($, _, helpers,
     }
   };
 
-  
-
-  
-
-  
-
   // Constructor for app
   var App = function(options) {
     this.options = _.extend(defaultOptions, options);
@@ -118,11 +126,6 @@ function($, _, helpers,
     }
     this.setup();
   };
-
-  // Extend with helpers
-  _.extend(App.prototype, helpers);
-
-  
 
   // Start function
   _.extend(App.prototype, {
@@ -152,7 +155,7 @@ function($, _, helpers,
                 $('head').append('<link rel="stylesheet" href="bower_components/' + s + '.css" type="text/css" />');
               });
             }
-            if (c.ie && (thisApp.isMSIE() && thisApp.isMSIE() <= 8)) {
+            if (c.ie && (helpers.isMSIE() && helpers.isMSIE() <= 8)) {
               _.each(c.ie, function(s, si) {
                 $('head').append('<link rel="stylesheet" href="bower_components/' + s + '.css" type="text/css" />');
               });
@@ -171,7 +174,7 @@ function($, _, helpers,
     render: function() {
       // Get main CSS
       $('head').append('<link rel="stylesheet" href="' + this.paths.css + '" type="text/css" />');
-      if (this.isMSIE() && this.isMSIE() <= 8) {
+      if (helpers.isMSIE() && helpers.isMSIE() <= 8) {
         $('head').append('<link rel="stylesheet" href="' + this.paths.ie + '" type="text/css" />');
       }
 

@@ -17,7 +17,7 @@
     "jquery": "~1.9",
     "underscore": "~1.5.2",
     "requirejs": "~2.1.9",
-    "text": "~2.0.10"
+    "text": "~2.0.10",
+    "jquery-vertical-timeline": "~0.2.2"
   }
 }
-
