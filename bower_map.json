@@ -74,6 +74,9 @@
     ],
     "css": [
       "jquery-vertical-timeline/dist/jquery-vertical-timeline.min"
+    ],
+    "images": [
+      "jquery-vertical-timeline/dist/images/"
     ]
   }
 }

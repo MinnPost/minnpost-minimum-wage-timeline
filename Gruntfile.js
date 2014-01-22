@@ -53,7 +53,6 @@ module.exports = function(grunt) {
       files: ['Gruntfile.js', 'js/*.js', 'data-processing/*.js']
     },
 
-    
     // Compass is an extended SASS.  Set it up so that it generates to .tmp/
     compass: {
       options: {
@@ -81,7 +80,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    
 
     // Copy relevant files over to distribution
     copy: {
@@ -105,10 +103,21 @@ module.exports = function(grunt) {
             dest: 'dist/data/'
           }
         ]
+      },
+      // Images from dependencies
+      lib_timeline: {
+        files: [
+          {
+            cwd: './bower_components/jquery-vertical-timeline/dist/images/',
+            expand: true,
+            filter: 'isFile',
+            src: ['**'],
+            dest: 'dist/images/'
+          }
+        ]
       }
     },
 
-    
     // R.js to bring together files through requirejs.
     requirejs: {
       app: {
@@ -126,10 +135,8 @@ module.exports = function(grunt) {
         }
       }
     },
-    
 
     // Brings files toggether
-    
     concat: {
       options: {
         separator: '\r\n\r\n'
@@ -157,7 +164,6 @@ module.exports = function(grunt) {
         dest: 'dist/<%= pkg.name %>.latest.ie.css'
       }
     },
-    
 
     // Minify JS for network efficiency
     uglify: {
@@ -270,7 +276,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-s3');
 
-  
   grunt.registerTask('inline_embed', 'Inline embed code generation.', function(name) {
     grunt.log.writeln('To embed this in the article, use the following:');
     grunt.log.writeln('=====================================');
@@ -278,18 +283,14 @@ module.exports = function(grunt) {
     grunt.log.writeln('<script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/projects-inline/' + name + '/' + name + '.latest.min.js"></script>');
     grunt.log.writeln('=====================================');
   });
-  
 
   // Default build task
   grunt.registerTask('default', ['jshint', 'compass:dist', 'clean', 'copy', 'requirejs', 'concat', 'cssmin', 'uglify']);
 
   // Watch tasks
-  
   grunt.registerTask('watcher', ['jshint', 'compass:dev']);
   grunt.registerTask('server', ['compass:dev', 'connect', 'watch']);
-  
 
   // Deploy tasks
   grunt.registerTask('deploy', ['s3', 'inline_embed:minnpost-minimum-wage-timeline']);
-
 };
