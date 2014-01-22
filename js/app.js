@@ -81,10 +81,10 @@ function($, _, helpers, jVT, tApplication, tLoading) {
     this.$content.find('.minimum-wage-timeline-container').verticalTimeline({
       key: '0AjYft7IGrHzNdFZTV0tHRGtEVWxrQXhRUGJ3emtoZmc',
       sheetName: 'timeline-data',
-      groupFunction: 'groupSegmentByDecade',
-      tabletopOptions: {
-        parameterize: 'http://gs-proxy.herokuapp.com/proxy?url='
-      }
+      groupFunction: 'groupSegmentByDecade'
+      //tabletopOptions: {
+      //  parameterize: 'http://gs-proxy.herokuapp.com/proxy?url='
+      //}
     });
 
 
