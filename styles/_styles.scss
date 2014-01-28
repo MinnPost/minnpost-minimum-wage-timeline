@@ -43,25 +43,19 @@
     padding-top: 1em;
   }
 
-  .loading {
-    width: 100%;
-    text-align: center;
-    padding: 2em 2em;
-    color: #ABABAB;
-    vertical-align: middle;
-    height: 100%;
-    line-height: 100%;
+  .vertical-timeline-container {
 
-    span {
-      padding: 10px 5px 10px 40px;
-      background: transparent $loader-image center left no-repeat;
+    .loading {
+      width: 100%;
+      text-align: center;
+      margin: 2em 0;
       vertical-align: middle;
-      height: 100%;
-      line-height: 100%;
+      min-height: 40px;
+      background: transparent $loader-image center center no-repeat;
+      font-size: 0.1px;
+      color: transparent;
     }
   }
-
-
 
 
 
