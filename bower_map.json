@@ -25,28 +25,24 @@
     ],
     "returns": "_"
   },
-  "handlebars": {
-    "rname": "handlebars",
-    "js": [
-      "handlebars/handlebars.min"
-    ]
-  },
   "tabletop": {
     "rname": "tabletop",
     "js": [
       "tabletop/src/tabletop"
-    ]
+    ],
+    "returns": "Tabletop"
+  },
+  "moment": {
+    "rname": "moment",
+    "js": [
+      "tabletop/src/tabletop"
+    ],
+    "returns": "moment"
   },
   "isotope": {
     "rname": "isotope",
     "js": [
       "isotope/jquery.isotope.min"
-    ]
-  },
-  "jquery-resize": {
-    "rname": "jquery-resize",
-    "js": [
-      "jquery-resize/jquery.ba-resize.min"
     ]
   },
   "eventEmitter": {

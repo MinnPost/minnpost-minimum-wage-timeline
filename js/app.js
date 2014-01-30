@@ -24,12 +24,6 @@ require.config({
     },
     'isotope': {
       deps: ['jquery']
-    },
-    'jquery-resize': {
-      deps: ['jquery']
-    },
-    'jquery-vertical-timeline': {
-      deps: ['jquery', 'handlebars', 'tabletop', 'isotope', 'jquery-resize', 'imagesloaded']
     }
   },
   baseUrl: 'js',
@@ -37,11 +31,10 @@ require.config({
     'requirejs': '../bower_components/requirejs/require',
     'text': '../bower_components/text/text',
     'jquery': '../bower_components/jquery/jquery.min',
+    'moment': '../bower_components/momentjs/min/moment.min',
     'underscore': '../bower_components/underscore/underscore-min',
-    'handlebars': '../bower_components/handlebars/handlebars.min',
     'tabletop': '../bower_components/tabletop/src/tabletop',
     'isotope': '../bower_components/isotope/jquery.isotope.min',
-    'jquery-resize': '../bower_components/jquery-resize/jquery.ba-resize.min',
     'eventEmitter/EventEmitter': '../bower_components/eventEmitter/EventEmitter.min',
     'eventie/eventie': '../bower_components/eventie/eventie',
     'imagesloaded': '../bower_components/imagesloaded/imagesloaded',
