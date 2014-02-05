@@ -80,10 +80,6 @@ function($, _, helpers, jVT, tApplication, tLoading) {
         parameterize: 'http://gs-proxy.herokuapp.com/proxy?url='
       }
     });
-
-
-
-
   };
 
   // Default options
