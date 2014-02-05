@@ -3631,10 +3631,10 @@ function($, _, helpers, jVT, tApplication, tLoading) {
       key: '0AjYft7IGrHzNdFZTV0tHRGtEVWxrQXhRUGJ3emtoZmc',
       sheetName: 'timeline-data',
       groupFunction: 'groupSegmentByDecade',
-      defaultDirection: 'oldest'
-      //tabletopOptions: {
-      //  parameterize: 'http://gs-proxy.herokuapp.com/proxy?url='
-      //}
+      defaultDirection: 'oldest',
+      tabletopOptions: {
+        parameterize: 'http://gs-proxy.herokuapp.com/proxy?url='
+      }
     });
 
 
