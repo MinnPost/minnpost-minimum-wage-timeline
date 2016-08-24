@@ -72,7 +72,7 @@ function($, _, helpers, jVT, tApplication, tLoading) {
     //   this.$content
 
     this.$content.find('.minimum-wage-timeline-container').verticalTimeline({
-      key: '0AjYft7IGrHzNdFZTV0tHRGtEVWxrQXhRUGJ3emtoZmc',
+      key: '1Vm0UkOi7_tWm7a1kpTYwotXl18JjpCqhNulSExaifIU',
       sheetName: 'timeline-data',
       groupFunction: 'groupSegmentByDecade',
       defaultDirection: 'oldest',
